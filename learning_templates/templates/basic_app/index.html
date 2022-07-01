@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+  {% block body_block %}
+    <h1>Welcome to index</h1>
+    <a href="{% url 'basic_app:relative' %}">Relative Templates Page</a>
+    <a href="{% url 'admin:index' %}">Admin Index</a>
+    <h1>{{ text|cut:'hello'  }}</h1>
+    <h1>{{ number|add:"91" }}</h1>
+  {% endblock %}
